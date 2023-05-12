@@ -15,9 +15,8 @@ body{
     color: white;
     font-weight: 400;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 main{
@@ -37,24 +36,24 @@ main h1{
     text-align: center;
 }
 
-main.social-media{
+main .social-media{
     display: flex;
     align-content: center;
 }
 
 /* Tira o sublinhado */
-main.social-media a{
+main .social-media a{
     text-decoration: none;
 }
 
 /* Ajuste do tamanho das imagens */
-main.social-media img{
+main .social-media img{
     width: 16px;
     margin-left: 3rem;
 }
 
 /* Retira a margem esquerda da figura do google */
-main.social-media a:first-child img{
+main .social-media a:first-child img{
     margin-left: 0;
 }
 
@@ -62,12 +61,12 @@ main.social-media a:first-child img{
 /* Estilo da linha de divisão */
 
 /* Espaçamento do OR em relação as figuras */
-main.alternative{
+main .alternative{
     margin-top: 0.5rem;
 }
 
 /* Estilo da palavra OR */
-main.alternative span{
+main .alternative span{
     font-size: 0.8rem;
     font-weight: 200;
     color: rgbs(255, 255, 255, 0.3);
@@ -120,16 +119,19 @@ main form input{
 }
 
 /* Estilo do botão */
-main form input[type="submit"]{
+main form input[type="submit"] {
     cursor: pointer;
     width: 50%;
     margin-top: 1rem;
     border: none;
     border-radius: 32px;
-    background: #6c63FF;
+    background: #6C63FF;
     color: white;
     font-size: 0.8rem;
     transition: all .3s ease-in-out;
+}
+main form input[type="submit"]:hover{
+    background: #5952d4;
 }
 
 /* Alinhamento da figura na parte inferior esquerda */
@@ -141,7 +143,7 @@ section.images{
     padding: 2rem;
 }
 /* Tamaho da imagem */
-section.images img{
+section .images img{
     width: 100%;
 }
 
@@ -160,18 +162,19 @@ section.images .circle{
 /* Responsividade */
 
 /* Telas grandes */
-@media only screen and (min-width: 900px) and (max-width: 1200px){
-    section.images img{
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    section .images img{
         width: 110%;
     }
-    section.images .circle{
+    section .images .circle{
        clip-path: circle(35% at right 80%);
     }
 
 }
+
 /* Telas médias */
 @media only screen and (max-width: 900px){
-    section.images{
+    section .images{
         
         display: none;
         visibility: hidden;
