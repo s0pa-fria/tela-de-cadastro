@@ -1,0 +1,196 @@
+/*Fonte (Poppins) importada Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Cor de fundo página e cor de fonte*/
+body{
+    background: #1B2029;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* ______________________________________________________________ */
+/* Estilo d título e redes socias */
+
+main h1{
+    color: #8880FE;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+main.social-media{
+    display: flex;
+    align-content: center;
+}
+
+/* Tira o sublinhado */
+main.social-media a{
+    text-decoration: none;
+}
+
+/* Ajuste do tamanho das imagens */
+main.social-media img{
+    width: 16px;
+    margin-left: 3rem;
+}
+
+/* Retira a margem esquerda da figura do google */
+main.social-media a:first-child img{
+    margin-left: 0;
+}
+
+/* ______________________________________________________________ */
+/* Estilo da linha de divisão */
+
+/* Espaçamento do OR em relação as figuras */
+main.alternative{
+    margin-top: 0.5rem;
+}
+
+/* Estilo da palavra OR */
+main.alternative span{
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: rgbs(255, 255, 255, 0.3);
+    position: relative;
+}
+/* Linhas antes e depois da palavra OR */
+main .alternative span::before, main .alternative span::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+main .alternative span::after{
+    left: 50px;
+}
+
+/* ______________________________________________________________ */
+/* Estilo do formulário */
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+main form input{
+    background: #161923;
+    width: 300px;
+    height: 25px;
+    padding: 0 0.5rem;
+    margin-top: 0.8rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 0.9rem;
+    border: 1px solid #040B18;
+    border-radius: 5px;
+}
+
+/* Estilo do botão */
+main form input[type="submit"]{
+    cursor: pointer;
+    width: 50%;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 32px;
+    background: #6c63FF;
+    color: white;
+    font-size: 0.8rem;
+    transition: all .3s ease-in-out;
+}
+
+/* Alinhamento da figura na parte inferior esquerda */
+section.images{
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+/* Tamaho da imagem */
+section.images img{
+    width: 100%;
+}
+
+/* Criação do círculo */
+section.images .circle{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #E8CBC0, #636FA4);
+    clip-path: circle(40% at right 80%);
+    z-index: -1;
+}
+/* ______________________________________________________________ */
+/* Responsividade */
+
+/* Telas grandes */
+@media only screen and (min-width: 900px) and (max-width: 1200px){
+    section.images img{
+        width: 110%;
+    }
+    section.images .circle{
+       clip-path: circle(35% at right 80%);
+    }
+
+}
+/* Telas médias */
+@media only screen and (max-width: 900px){
+    section.images{
+        
+        display: none;
+        visibility: hidden;
+    }
+    main{
+        width: 100vw;
+    }
+}
+/* Telas pequenas */
+@media only screen and (max-width: 450px){
+    main h1{
+        font-size: 1rem;
+    }
+
+    main .alternative span{
+        font-size: 0.8rem;
+    }
+
+    main form label span, main form input[type="submit"]{
+        font-size: 0.8rem;
+    }
+}
