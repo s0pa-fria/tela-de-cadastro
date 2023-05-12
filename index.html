@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+
+        <h1>Criar conta</h1>
+        <div class="social-media">
+            <a href="https://www.google.com/" target="_blank">
+                <img src="assets/google.png" alt="Google">
+            </a>
+
+            <a href="https://pt-br.facebook.com/" target="_blank">
+                <img src="assets/facebook.png" alt="facebook">
+            </a>
+
+            <a href="https://br.linkedin.com/" target="_blank">
+                <img src="assets/linkedin.png" alt="linkedin">
+            </a>
+        </div>
+
+        <!-- ___________________________________________________ -->
+        <!-- Linha com a divisão -->
+
+        <div class="alternative">
+            <span>OU</span>
+        </div>
+
+        <!-- ___________________________________________________ -->
+        <!-- Início do formulário -->
+
+        <form action="https://api.sheetmonkey.io/form/dGaTqhi1mUB5GMftwkUe2z" method="post">
+            <label for="name">
+                <span>Nome</span>
+                <input type="text" id="name" name="name">
+            </label>
+
+            <label>
+                <span>CEP:</span>
+                <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);">
+            </label>
+
+            <label>
+                <span>Rua:</span>
+                <input name="rua" type="text" id="rua" size="60">
+            </label>
+
+            <label>
+                <span>Bairro:</span>
+                <input name="bairro" type="text" id="bairro" size="40">
+            </label>
+        
+
+            <label>
+                <span>Cidade:</span>
+                <input name="cidade" type="text" id="cidade" size="40">
+            </label>
+
+            <label>
+                <span>Estado:</span>
+                <input name="uf" type="text" id="uf" size="2">
+            </label>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <!-- ___________________________________________________ -->
+    <!-- Imagem lateral -->
+
+    <section class="images">
+
+        <img src="assets/mobile.svg" alt="mobile">
+        <div class="circle"></div>
+
+    </section>
+
+    <!-- ___________________________________________________ -->
+    <!-- Adicionando Javascript (Para traar CEP) -->
+
+    <script src="cep.js"></script>
+
+</body>
+</html>
